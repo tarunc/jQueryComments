@@ -1,3 +1,10 @@
+// This jQuery plugin will gather the comments within
+// the current jQuery collection, returning all the
+// comments in a new jQuery collection.
+//
+// NOTE: Comments are wrapped in DIV tags.
+
+
 window.jQuery.fn.comments = function( blnDeep ){
     var blnDeep = (blnDeep || false);
     var jComments = jQuery( [] );
