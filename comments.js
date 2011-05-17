@@ -1,13 +1,13 @@
 window.jQuery.fn.comments = function( blnDeep ){
     var blnDeep = (blnDeep || false);
-    var jComments = $( [] );
+    var jComments = jQuery( [] );
 
     // Loop over each node to search its children for
     // comment nodes and element nodes (if deep search).
     this.each(
         function( intI, objNode ){
             var objChildNode = objNode.firstChild;
-            var strParentID = $( this ).attr( "id" );
+            var strParentID = jQuery( this ).attr( "id" );
 
             // Keep looping over the top-level children
             // while we have a node to examine.
@@ -32,7 +32,7 @@ window.jQuery.fn.comments = function( blnDeep ){
 
                 // Traverse this node deeply.
                 jComments = jComments.add(
-                    $( objChildNode ).comments( true )
+                    jQuery( objChildNode ).comments( true )
                     );
 
                     }
